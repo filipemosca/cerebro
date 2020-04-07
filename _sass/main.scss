@@ -1,0 +1,744 @@
+.wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.wrapper-post {
+  max-width: 100%;
+}
+
+article {
+  p, h1, h2, h3, h4, h5, h6, figcaption {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  p {
+    font-family: Georgia, serif;
+  }
+}
+.wrapper-footer {
+  max-width: 700px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+body {
+  margin: 0 0 0 0;
+  font: 1.2em Helvetica, Arial, sans-serif;
+  // font-family: Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  // --header-font: "Times New Roman", Times, serif;
+  --header-font: "Times New Roman", Times, serif;;
+}
+
+
+// Start Themes colors 
+html, html[data-theme="light"] {
+  --font-color: #333;
+  --font-color-header: #222;
+  --bg-color: white;
+  --link-color: blue;
+  --link-visited-color: purple;
+  --botao-color: #dedede;
+  --marked-color: yellow;
+  --hover-bg-color: #cccccc;
+  --comments-subject: green;
+  --light: black;
+  --blockquote-color: rgb(221, 221, 221);
+  --icon-color: rgb(131, 128, 127);
+}
+
+html[data-theme="dark"] {
+  --font-color: #b3b9c5;
+  --font-color-header: #b3b9c5;
+  --bg-color: #202020;
+  --link-color: #81a5f8;
+  --link-visited-color: #c197f8;
+  --botao-color: #3d3d3d;
+  --marked-color: #3560d4;
+  --hover-bg-color: #303030;
+  --comments-subject: orange;
+  --light: yellow;
+  --blockquote-color: #181818;
+  --icon-color: #b3b9c5;
+}
+@media (prefers-color-scheme: dark) { // This configure the dark theme to default
+  html {
+    content: "dark";
+  }
+}
+#theme-toggle {
+  display: inline-block;
+  font-size: 14px;
+  border: 1px solid var(--font-color);
+  border-top: none;
+  padding: 4px 6px 4px 6px;
+  border-radius: 0 0 0.5rem 0.5rem;
+  color: var(--link-color);
+  background-color: var(--bg-color);
+  outline: none;
+}
+#theme-toggle:hover {
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+}
+// End of themes definition
+
+.icon {
+  width: 16px;
+  height: 16px;
+  fill: var(--font-color);
+}
+.icon-background {
+  width: 100px;
+  height: 100px;
+  fill: var(--font-color);
+}
+
+
+// Start Header
+#header {
+  h1 {
+  margin-top: 10px;
+  font-weight: normal;
+  text-align: left;
+  max-width: 100%;
+  font-size: 3em;
+    a { color: var(--font-color);
+    }
+  }
+}
+// End Header
+
+.icon-abertura {
+  fill: var(--icon-color);
+  padding-right: 5px;
+}
+.mosca {
+  display: inline-block;
+}
+
+// buttons layout for blog
+.botao {
+  text-decoration: none;
+  font-size: medium;
+  background-color: var(--botao-color);
+  color: var(--font-color);
+  font-weight: normal;
+  padding: 4px 6px 3px 6px;
+  border-radius: 4px;
+  display: inline-block;
+  padding-right: 5px;
+  margin-right: 2px;
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+.botao:hover {
+  background-color: var(--hover-bg-color);
+  text-decoration: none;
+}
+.botao:visited {
+  color: var(--font-color);
+}
+.pseudobotao2 {
+  text-decoration: none;
+  font-size: medium;
+  border: 1px solid;
+  color: var(--link-color);
+  padding: 4px 6px 3px 6px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 2px;
+  margin-bottom: 2px;
+  margin-top: 5px;
+  line-height: 1.2;
+}
+.botao-entrada {
+  font-size: 0.7em;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0.25em;
+  margin-top: 0;
+}
+
+
+// End buttons layout
+
+// Categories colors
+.medicina {background-color: rgb(14, 129, 14); color: #f1f1f1;}
+.linux {background-color: rgb(197, 37, 37); color: #f1f1f1;}
+.aleatoriedades {background-color: rgb(117, 34, 158); color: #f1f1f1;}
+.tecnologia {background-color: rgb(207, 88, 19); color: #f1f1f1;}
+.covid19 {background-color: rgb(13, 100, 74); color: #f1f1f1;}
+.cinema {background-color: rgb(31, 95, 233); color: #f1f1f1;}
+.xadrez {background-color: rgb(158, 28, 93); color: #f1f1f1;}
+.livros {background-color: rgb(12, 112, 126); color: #f1f1f1;}
+.webdev {background-color: rgb(117, 66, 0); color: #f1f1f1;}
+.categorias:visited {color: #f1f1f1;}
+.categorias:hover {background-color: #000000;}
+
+/* Barra de navegaçao */
+nav {
+  padding-top: 0px;
+  margin: 0 auto;
+  text-align: left;
+  width: 100%;
+  display: inline-block;
+  a {
+    text-decoration: none;
+    font-size: 14px;
+    border: 1px solid var(--font-color);
+    border-top: none;
+    padding: 4px 6px 4px 6px;
+    border-radius: 0 0 0.5rem 0.5rem;
+    color: var(--link-color);
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  a:hover {
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+    text-decoration: none;
+  }
+  a:visited {
+    color: var(--link-color);
+  }
+}
+.nav-icons {
+  fill: var(--link-color);
+}
+.current {
+  padding-bottom: 10px;
+  margin-bottom: 0px;
+}
+
+
+// svg icons
+.fa, .fas, .fab, .far {
+  padding-right: 5px;
+}
+#face, #git, {
+  font-size: 20px;
+}
+.fa-rss {
+  font-size: 18px;
+  color: gray;
+}
+#face {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+#calendar-index {
+  padding-right: 5px;
+}
+#portrait-index {
+  padding-right: 5px;
+}
+.fa-clock {padding-right: 0px;}
+.email {
+  border-radius: 1rem;
+  color: gray;
+  p {
+  margin: 0;
+  display: inline-block;
+  }
+}
+
+
+/* conteúdo principal */
+.main {
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+// Categories background image
+.back {
+  background-image: url(/cam.svg);
+  background-position: right top; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: contain; /* Resize the background image to cover the entire container */
+}
+.back-medicina {
+  background-image: url(/assets/svgs/asclepius.svg);
+  background-position: right top;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: contain; /* Resize the background image to cover the entire container */
+}
+
+// Collapsible begin
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 0.5rem;
+  margin-bottom: 5px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+// Collapsible end
+
+// Adding 'Contents' headline to the TOC
+#markdown-toc::before {
+  content: "Sumário";
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+#markdown-toc {
+  max-width: 300px;
+  padding: 1.5em;
+  padding-left: 2rem;
+  margin-left: 1.5rem;
+  display: inline-block;
+  border-color: black;
+  border: 1px solid;
+  border-radius: 1rem;
+  font-size: 1rem;
+  a:hover {
+    color: #686868;
+  }
+}
+
+
+
+
+
+
+h1  {
+  text-align: left;
+  margin-bottom: 0;
+  max-width: 600px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--header-font);
+  color: var(--font-color-header);
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 0.2em;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+a:visited {
+  color: var(--link-visited-color);
+}
+a:hover {
+  text-decoration: underline;
+}
+p, li {
+  line-height: 1.8;
+  color: var(--font-color);
+}
+img {
+  max-width: 100%;
+  margin-top: 40px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+img > article {
+  width: 100%;
+}
+figure {
+  margin-bottom: 3em;
+  margin-top: 3em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+figcaption {
+  text-align: center;
+  margin-top: 0.8em;
+  font-size: 0.8em;
+}
+video {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+article > ol li {
+  padding-bottom: 0.8em;
+}
+/* article a[target="_blank"]:after {
+  content: url(http://upload.wikimedia.org/wikipedia/commons/6/64/Icon_External_Link.png);
+  margin: 0 0 0 5px;
+}
+*/
+
+// select marked text
+::selection {
+  background: var(--marked-color); /* WebKit/Blink Browsers */
+  color: #000;
+}
+::-moz-selection {
+  background: var(--marked-color); /* Gecko Browsers */
+}
+
+
+.abertura {
+  color: var(--font-color);
+  display: block;
+  h2 {
+    margin-bottom: 1px;
+  }
+  p {
+    margin-top: 6px;
+  }
+}
+.apresentacao {
+  font-family: Georgia, serif;
+}
+.redes {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  p {
+    margin-bottom: 0;
+    margin-top: 0;
+    a {
+     text-decoration: none; 
+    }
+  }
+}
+.svg-seguir {
+  padding: 1px;
+}
+#ultimas {
+  padding-top: 30px;
+}
+.item {
+  flex: 1;
+}
+.item-inferior {
+  max-width: 300px;
+  margin: 0 auto;
+}
+.foto {
+  border-radius: 50%;
+  max-width: 100px;
+  margin: 0 auto;
+}
+input, textarea {
+  margin-top: 0;
+  padding-top: 0;
+  background-color: var(--botao-color);
+  color: var(--font-color);
+  font-weight: normal;
+  padding: 5px 8px 5px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  border: solid 0px;
+  padding-right: 5px;
+  margin-right: 2px;
+  margin-bottom: 5px;
+  line-height: 1.2;
+  max-width: 90%;
+}
+input:hover, textarea:hover {
+  background-color: var(--hover-bg-color);
+  color: var(--link-color);
+  svg {
+    fill: var(--link-color);
+  }
+}
+button {
+  border: none;
+}
+.ei {
+  margin-top: 80px;
+  h1 {
+  margin-bottom: 0;
+  }
+  p {
+    margin-top: 0;
+  }
+}
+#aprovacao {
+  font-size: small;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+
+.post-date {
+  font-size: 0.9em;
+  margin-bottom: 0;
+}
+.post-author {
+  font-size: 16px;
+  color: gray;
+  text-align: right;
+  margin-top: 0;
+}
+.post-list {
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  li h2 {
+    margin-bottom: 0;
+    line-height: 1.2;
+    margin-top: 0.4em;
+  }
+  li h2 a {
+    text-decoration: none;
+    font-size: 24px;
+    color: var(--font-color);
+    font-weight: 600;
+
+  }
+  li h2 a:hover {
+    color: var(--link-color);
+    text-decoration: underline;
+  }
+}
+.archive-list {
+  li {
+    line-height: 1em;
+    margin-bottom: 0.6em;
+  }
+  li a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2em;
+
+    padding-bottom: 0;
+    line-height: 1.6em;
+    font-family: var(--header-font);
+  }
+  li a:hover {
+    text-decoration: underline;
+  }
+}
+.post-info-archive {
+  color: gray;
+  margin-top: 0;
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 0.8em;
+  padding-top: 0;
+}
+
+#post-page-info {
+  font-size: 16px;
+  color: gray;
+  margin-top: 1px;
+  text-align: center;
+}
+.post-info {
+  font-size: 16px;
+  color: gray;
+  margin-top: 5px;
+  display: block;
+}
+
+
+
+pre { 
+	margin: 20px; padding: 20px; 
+	color: #aaa; background-color: #222;
+	white-space: pre; text-shadow: 0 1px 0 #000;
+	border-radius: 15px; border-bottom: 1px solid #555;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.4) inset, 0 0 20px rgba(0,0,0,0.2) inset;
+	font: 16px/24px 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+}
+kbd {
+  background-color: #eee;
+  border-radius: 3px;
+  border: 1px solid #b4b4b4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .2), 0 2px 0 0 rgba(255, 255, 255, .7) inset;
+  color: #333;
+  display: inline-block;
+  font-size: .85em;
+  font-weight: 700;
+  line-height: 1;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+blockquote {
+  position: relative;
+  font-family: 'Sanchez', serif;
+  font-style: italic;
+  text-align: center;
+  &:before {
+      content: '\201C';
+      position: absolute;
+      top: -0.30em;
+      left: -0.2em;
+      color: var(--blockquote-color);
+      font-size: 8em;
+      z-index: -1;
+   }
+}
+q {
+  font-family: 'Sanchez', serif;
+  font-style: italic;
+}
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(189, 189, 189, 0), rgba(211, 211, 211, 0.75), rgba(201, 201, 201, 0));
+}
+
+
+// for instagram embed in posts
+.instagram-div {
+  max-width: 500px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+// Footnote simble in posts
+.footnote {
+  color: var(--link-color);
+  :visited {
+    color: var(--link-visited-color);
+  }
+}
+a.footnote:before {   
+  content: "[";
+ }
+a.footnote:after {
+  content: "]";
+}
+
+
+// Comments mail
+.comments {
+  background-color: var(--botao-color);
+  padding: 1px 10px 5px 10px;
+  border-radius: 10px;
+}
+
+
+/* Aqui começa o footer */
+.footer {
+  padding: 10px;
+  text-align: right;
+}
+.footer-col ul {
+  padding-left: 0;
+  li {
+  list-style-type: none;
+  }
+}
+.coisas {
+  margin: 0 auto;
+  font-size: 16px;
+  color: gray;
+  display: inline;
+  text-align: center;
+}
+.license {
+  display: inline-block;
+  width: 100%;
+  p {
+    text-align: center;
+    font-size: 14px;
+    margin: 0 0 0 0;
+    color: gray;
+    a {
+      font-size: 14px;
+      color: var(--link-color)ue;
+      text-decoration: none;
+    }
+  }
+  a img {
+    margin: 5px auto;
+    display: block
+  }
+}
+.menu {
+  li {
+    margin-bottom: 5px;
+  }
+  a {
+    font-size: 16px;
+  }
+  a:hover {
+    color: black;
+  }
+}
+#creditos {
+  color: gray;
+  font-size: 16px;
+}
+.svg {
+  padding-right: 5px;
+  width: 14px;
+  fill: var(--link-color);
+}
+.svg-icon {
+  height: 16px;
+  padding-right: 5px;
+  fill: gray;
+}
+.feedly {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  vertical-align: top;
+  display: inline-block;
+  top: .155em;
+  position: relative;
+}
+
+
+
+/* Aqui é pra computador */
+@media only screen and (min-width: 800px) {
+  #post-info,{
+    display: inline-block;
+  }
+  #markdown-toc {
+    float: right;
+  }
+}
+
+/* Aqui é para tablet */
+@media only screen and (min-width: 600px) {
+  .wrapper-post {
+    max-width: 700px;
+    margin: 0 auto;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  article {
+    p, h1, h2, h3, h4, h5, h6 {
+    margin-right: 0;
+    margin-left: 0;
+    }
+  }
+  .abertura {
+    display: flex;
+  }
+  img {
+    width: inherit;
+  }
+}

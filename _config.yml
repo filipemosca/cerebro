@@ -1,0 +1,32 @@
+title: Mosquildo
+author: Filipe Mosca
+url: "https://mosquildo.com.br"
+description: Blog sobre medicina, geek e Linux
+
+defaults:
+#defaults para os posts
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Filipe Mosca"
+      permalink: "/:year/:categories/:title"
+#defaults para todo o resto
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+feed:
+  categories:
+    - medicina
+
+# para o SEO tag:
+lang: pt_BR
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag

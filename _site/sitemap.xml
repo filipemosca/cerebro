@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:4000/2020/covid-19</loc>
+<lastmod>2020-04-07T00:00:00-03:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/listas/covid-19/China-Is-Avoiding-Blame-by-Trolling-the-World.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/now.html</loc>
+</url>
+<url>
+<loc>http://localhost:4000/assets/picol/demo.html</loc>
+<lastmod>2017-11-29T06:46:24-03:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/listas/covid-19/Hydroxychloroquine_final_frances.pdf</loc>
+<lastmod>2020-04-08T02:06:00-03:00</lastmod>
+</url>
+</urlset>

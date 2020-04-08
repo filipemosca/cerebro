@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt_BR"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="pt_BR" /><updated>2020-04-08T02:06:55-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mosquildo</title><subtitle>Blog sobre medicina, geek e Linux</subtitle><author><name>Filipe Mosca</name></author><entry><title type="html">COVID-19, SARS-CoV-2, Hidroxicloroquina e muito mais</title><link href="http://localhost:4000/2020/covid-19" rel="alternate" type="text/html" title="COVID-19, SARS-CoV-2, Hidroxicloroquina e muito mais" /><published>2020-04-07T00:00:00-03:00</published><updated>2020-04-07T00:00:00-03:00</updated><id>http://localhost:4000/2020/covid-19</id><content type="html" xml:base="http://localhost:4000/2020/covid-19">&lt;h2 id=&quot;noticias&quot;&gt;Noticias&lt;/h2&gt;
+
+&lt;h4 id=&quot;1-china-is-avoiding-blame-by-trolling-the-world&quot;&gt;1. &lt;a href=&quot;/listas/covid-19/China-Is-Avoiding-Blame-by-Trolling-the-World.html&quot;&gt;China Is Avoiding Blame by Trolling the World&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Matéria falando sobre a China ser culpada pela disseminação muncial do SARS-CoV-2. E sobre a falta de transparência do partido comunista Chinês.&lt;/p&gt;
+
+&lt;h2 id=&quot;papers&quot;&gt;Papers&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Gautret P, Lagier JC, Parola P, et al. &lt;strong&gt;Hydroxychloroquine and azithromycin as a treatment of COVID-19: results of an open-label non-randomized clinical trial&lt;/strong&gt; [published online ahead of print, 2020 Mar 20]. Int J Antimicrob Agents. 2020;105949. doi:10.1016/j.ijantimicag.2020.105949.&lt;/p&gt;
+
+    &lt;p&gt;Esse foi o estudo francês responsável por causar todo o agitamento na ciência em busca de um remédio milagroso para curar a COVID-19. &lt;a href=&quot;/listas/covid-19/Hydroxychloroquine_final_frances.pdf&quot;&gt;Link para o PDF&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Sahraei Z, Shabani M, Shokouhi S, Saffaei A. &lt;strong&gt;Aminoquinolines Against Coronavirus Disease 2019 (COVID-19): Chloroquine or Hydroxychloroquine&lt;/strong&gt; [published online ahead of print, 2020 Mar 16]. Int J Antimicrob Agents. 2020;105945. doi:10.1016/j.ijantimicag.2020.105945.&lt;/li&gt;
+  &lt;li&gt;Guo YR, Cao QD, Hong ZS, et al. The origin, transmission and clinical therapies on coronavirus disease 2019 (COVID-19) outbreak - an update on the status. Mil Med Res. 2020;7(1):11. Published 2020 Mar 13. doi:10.1186/s40779-020-00240-0.&lt;/li&gt;
+  &lt;li&gt;Cheng, V. C., Lau, S. K., Woo, P. C., &amp;amp; Yuen, K. Y. (2007). Severe acute respiratory syndrome coronavirus as an agent of emerging and reemerging infection. Clinical microbiology reviews, 20(4), 660-694. https://doi.org10.1128/CMR.00023-07.&lt;/li&gt;
+  &lt;li&gt;Menachery, V. D., Yount Jr, B. L., Debbink, K., Agnihothram, S., Gralinski, L. E., Plante, J. A., … &amp;amp; Randell, S. H. (2015). A SARS-like cluster of circulating bat coronaviruses shows potential for human emergence. Nature medicine, 21(12), 1508. https://doi.org/10.1038/nm.3985.&lt;/li&gt;
+  &lt;li&gt;Liu Y, Gayle AA, Wilder-Smith A, Rocklöv J. The reproductive number of COVID-19 is higher compared to SARS coronavirus. J Travel Med. 2020;(February):1–6.&lt;/li&gt;
+  &lt;li&gt;Muniz-Rodriguez K, Chowell G, Cheung C-H, Jia D, Lai P-Y, Lee Y, et al. Epidemic doubling time of the COVID-19 epidemic by Chinese province. medRxiv Prepr. 2020;&lt;/li&gt;
+  &lt;li&gt;Wang C, Liu L, Hao X, Guo H, Wang Q, Huang J, et al. Evolving Epidemiology and Impact of Non-pharmaceutical Interventions on the Outbreak of Coronavirus Disease 2019 in Wuhan, China. medRxiv. 2020;&lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Filipe Mosca</name></author><summary type="html">Noticias</summary></entry></feed>

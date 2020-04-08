@@ -7,7 +7,7 @@ layout: wrapped
 <div class="abertura">
   <div class="item">
     <h2>Seja bem vindo!</h2>
-    <p class="apresentacao">Eu sou Filipe Mosca e esse é o meu cantinho na internet. Aqui escrevo sobre assuntos como medicina baseada em evidências, tecnologia, linux, cultura nerd, filmes <em>etc</em>.</p>
+    <p class="apresentacao">Eu sou Filipe Mosca e essas são as minhas listas de leitura. Algumas matérias estão salvas e outras apenas estão linkadas. Boa leitura!</p>
   </div>
 
 
@@ -30,19 +30,11 @@ layout: wrapped
         </svg> </a> 
     </p>
 
-      <form id="assinar-email" action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('https://feedburner.google.com/fb/a/mailverify?uri=Mosquildo', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><span><input type="text" style="width:160px" name="email" placeholder="Informe seu email" /></span><input type="hidden" value="Mosquildo" name="uri"/><input type="hidden" name="loc" value="pt_BR"/><input type="submit" value="Assinar" /></form>
-
-        <a class="botao botao-entrada categorias medicina" href="/medicina.html">Medicina</a>
-        <a class="botao botao-entrada categorias covid19" href="/covid19.html">COVID-19</a>
-        <a class="botao botao-entrada categorias linux" href="/linux.html">Linux</a>
-        <a class="botao botao-entrada categorias cinema" href="/cinema.html">Cinema</a>
-        <a class="botao botao-entrada categorias aleatoriedades" href="/aleatoriedades.html">Aleatoriedades</a>
-
     </div>
   </div>
 </div>
 
-<h2 id="ultimas">Últimas postagens <a href="/arquivo.html" class="botao">Ver todas</a></h2>
+<h2 id="ultimas">Últimas listas</h2>
 
 <div class="post-list">
   <ul>
@@ -60,7 +52,7 @@ layout: wrapped
         <span class="pseudobotao2">{{ tag_name }}</span>
         {% endfor %}
 
-        <span class="post-info"> <span>&nbsp{{ post.date | date: "%-d" }} {% assign m = post.date | date: "%-m" %}
+        <span class="post-info">{{ post.date | date: "%-d" }} {% assign m = post.date | date: "%-m" %}
         {% case m %}
           {% when '1' %}jan
           {% when '2' %}fev
@@ -74,7 +66,7 @@ layout: wrapped
           {% when '10' %}out
           {% when '11' %}nov
           {% when '12' %}dez
-        {% endcase %}{{ post.date | date: "%Y"}}</span>&nbsp /&nbsp{% include read-time.html content=post.content %}</span>
+        {% endcase %}{{ post.date | date: "%Y"}}</span>
 
         <!--
         <p class="excerpt">{{ post.excerpt | strip_html | truncatewords: 50 }}</p>

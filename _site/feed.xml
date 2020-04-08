@@ -1,16 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt_BR"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="pt_BR" /><updated>2020-04-08T02:06:55-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mosquildo</title><subtitle>Blog sobre medicina, geek e Linux</subtitle><author><name>Filipe Mosca</name></author><entry><title type="html">COVID-19, SARS-CoV-2, Hidroxicloroquina e muito mais</title><link href="http://localhost:4000/2020/covid-19" rel="alternate" type="text/html" title="COVID-19, SARS-CoV-2, Hidroxicloroquina e muito mais" /><published>2020-04-07T00:00:00-03:00</published><updated>2020-04-07T00:00:00-03:00</updated><id>http://localhost:4000/2020/covid-19</id><content type="html" xml:base="http://localhost:4000/2020/covid-19">&lt;h2 id=&quot;noticias&quot;&gt;Noticias&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="pt_BR"><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="pt_BR" /><updated>2020-04-08T02:22:18-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Mosquildo</title><subtitle>Blog sobre medicina, geek e Linux</subtitle><author><name>Filipe Mosca</name></author><entry><title type="html">COVID-19, SARS-CoV-2, Hidroxicloroquina e muito mais</title><link href="http://localhost:4000/2020/covid-19" rel="alternate" type="text/html" title="COVID-19, SARS-CoV-2, Hidroxicloroquina e muito mais" /><published>2020-04-07T00:00:00-03:00</published><updated>2020-04-07T00:00:00-03:00</updated><id>http://localhost:4000/2020/covid-19</id><content type="html" xml:base="http://localhost:4000/2020/covid-19">&lt;h2 id=&quot;noticias&quot;&gt;Noticias&lt;/h2&gt;
 
-&lt;h4 id=&quot;1-china-is-avoiding-blame-by-trolling-the-world&quot;&gt;1. &lt;a href=&quot;/listas/covid-19/China-Is-Avoiding-Blame-by-Trolling-the-World.html&quot;&gt;China Is Avoiding Blame by Trolling the World&lt;/a&gt;&lt;/h4&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;h3 id=&quot;china-is-avoiding-blame-by-trolling-the-world&quot;&gt;&lt;a href=&quot;/listas/covid-19/China-Is-Avoiding-Blame-by-Trolling-the-World.html&quot;&gt;China Is Avoiding Blame by Trolling the World&lt;/a&gt;&lt;/h3&gt;
 
-&lt;p&gt;Matéria falando sobre a China ser culpada pela disseminação muncial do SARS-CoV-2. E sobre a falta de transparência do partido comunista Chinês.&lt;/p&gt;
+    &lt;p&gt;Matéria falando sobre a China ser culpada pela disseminação muncial do SARS-CoV-2. E sobre a falta de transparência do partido comunista Chinês.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h2 id=&quot;papers&quot;&gt;Papers&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;Gautret P, Lagier JC, Parola P, et al. &lt;strong&gt;Hydroxychloroquine and azithromycin as a treatment of COVID-19: results of an open-label non-randomized clinical trial&lt;/strong&gt; [published online ahead of print, 2020 Mar 20]. Int J Antimicrob Agents. 2020;105949. doi:10.1016/j.ijantimicag.2020.105949.&lt;/p&gt;
+    &lt;p&gt;Gautret P, Lagier JC, Parola P, et al. &lt;a href=&quot;/listas/covid-19/Hydroxychloroquine_final_frances.pdf&quot;&gt;&lt;strong&gt;Hydroxychloroquine and azithromycin as a treatment of COVID-19: results of an open-label non-randomized clinical trial&lt;/strong&gt;&lt;/a&gt; [published online ahead of print, 2020 Mar 20]. Int J Antimicrob Agents. 2020;105949. doi:10.1016/j.ijantimicag.2020.105949.&lt;/p&gt;
 
-    &lt;p&gt;Esse foi o estudo francês responsável por causar todo o agitamento na ciência em busca de um remédio milagroso para curar a COVID-19. &lt;a href=&quot;/listas/covid-19/Hydroxychloroquine_final_frances.pdf&quot;&gt;Link para o PDF&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;Esse foi o estudo francês responsável por causar todo o agitamento na ciência em busca de um remédio milagroso para curar a COVID-19.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;h3 id=&quot;hidroxicloroquina-o-dia-em-que-a-ciência-parou&quot;&gt;&lt;a href=&quot;/listas/covid-19/hidroxicloroquina-o-dia-que-a-ciencia-parou.html&quot;&gt;Hidroxicloroquina: o dia em que a ciência parou&lt;/a&gt;&lt;/h3&gt;
+
+    &lt;p&gt;Postagem no blog Medicina Baseada em Evidências criticando a interpretação apressada do estudo acima.&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;Sahraei Z, Shabani M, Shokouhi S, Saffaei A. &lt;strong&gt;Aminoquinolines Against Coronavirus Disease 2019 (COVID-19): Chloroquine or Hydroxychloroquine&lt;/strong&gt; [published online ahead of print, 2020 Mar 16]. Int J Antimicrob Agents. 2020;105945. doi:10.1016/j.ijantimicag.2020.105945.&lt;/li&gt;
   &lt;li&gt;Guo YR, Cao QD, Hong ZS, et al. The origin, transmission and clinical therapies on coronavirus disease 2019 (COVID-19) outbreak - an update on the status. Mil Med Res. 2020;7(1):11. Published 2020 Mar 13. doi:10.1186/s40779-020-00240-0.&lt;/li&gt;

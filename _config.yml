@@ -1,4 +1,4 @@
-title: Mosquildo
+title: Lista de Leitura
 author: Filipe Mosca
 url: "https://mosquildo.com.br"
 description: Blog sobre medicina, geek e Linux
@@ -19,9 +19,7 @@ defaults:
     values:
       layout: "default"
 
-feed:
-  categories:
-    - medicina
+
 
 # para o SEO tag:
 lang: pt_BR

@@ -8,13 +8,52 @@
   max-width: 100%;
 }
 
+/*
+[1]: All items a forced onto a single line, causing the overflow when necessary.
+[2]: Automatic overflow means a scroll bar won’t be present if it isn’t needed
+[3]: Make it smooth scrolling on iOS devices before 
+[4]: Hide the ugly scrollbars in Edge until the scrollable area is hovered
+[5]: Hide the scroll bar in WebKit browsers
+*/
+.scroll {
+  white-space: nowrap; /* [1] */
+  overflow-x: auto; /* [2] */
+  -webkit-overflow-scrolling: touch; /* [3] */
+  -ms-overflow-style: -ms-autohiding-scrollbar; /* [4] */
+  scrollbar-width: thin;
+}
+
+//* [5] *
+ .scroll::-webkit-scrollbar {
+   display: show;
+   -webkit-appearance: none;
+}
+.scroll::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  border: 2px solid white; /* should match background, can't be transparent */
+  background-color: rgba(167, 167, 167, 0.5);
+}
+.scroll::-webkit-scrollbar:horizontal {
+  height: 12px;
+}
+
+
+
+
 article {
-  p, h1, h2, h3, h4, h5, h6, figcaption {
+  p, h1, h2, h3, h4, h5, h6, figcaption, ul, ol {
     margin-right: 20px;
     margin-left: 20px;
   }
-  p {
-    font-family: Georgia, serif;
+  p, ol li, ul li {
+    font-family: 'Noto Serif';
+  }
+  > ol li {
+    padding-bottom: 0.8em;
+  }
+  a {
+    word-break: break-word;
+    text-decoration: underline;
   }
 }
 .wrapper-footer {
@@ -26,12 +65,12 @@ article {
 }
 body {
   margin: 0 0 0 0;
-  font: 1.2em Helvetica, Arial, sans-serif;
+  font: 1.15em Helvetica, Arial, sans-serif;
   // font-family: Helvetica, Arial, sans-serif;
   background-color: var(--bg-color);
   color: var(--font-color);
   // --header-font: "Times New Roman", Times, serif;
-  --header-font: "Times New Roman", Times, serif;;
+  --header-font: 'Noto Serif', serif;
 }
 
 
@@ -40,7 +79,7 @@ html, html[data-theme="light"] {
   --font-color: #333;
   --font-color-header: #222;
   --bg-color: white;
-  --link-color: blue;
+  --link-color: #1a0dab;
   --link-visited-color: purple;
   --botao-color: #dedede;
   --marked-color: yellow;
@@ -90,7 +129,7 @@ html[data-theme="dark"] {
 .icon {
   width: 16px;
   height: 16px;
-  fill: var(--font-color);
+  fill: gray;
 }
 .icon-background {
   width: 100px;
@@ -113,10 +152,7 @@ html[data-theme="dark"] {
 }
 // End Header
 
-.icon-abertura {
-  fill: var(--icon-color);
-  padding-right: 5px;
-}
+
 .mosca {
   display: inline-block;
 }
@@ -128,7 +164,7 @@ html[data-theme="dark"] {
   background-color: var(--botao-color);
   color: var(--font-color);
   font-weight: normal;
-  padding: 4px 6px 3px 6px;
+  padding: 5px 6px 4px 6px;
   border-radius: 4px;
   display: inline-block;
   padding-right: 5px;
@@ -143,46 +179,113 @@ html[data-theme="dark"] {
 .botao:visited {
   color: var(--font-color);
 }
-.pseudobotao2 {
-  text-decoration: none;
-  font-size: medium;
-  border: 1px solid;
-  color: var(--link-color);
-  padding: 4px 6px 3px 6px;
-  border-radius: 4px;
-  display: inline-block;
-  margin-right: 2px;
-  margin-bottom: 2px;
-  margin-top: 5px;
-  line-height: 1.2;
-}
 .botao-entrada {
   font-size: 0.7em;
   margin-left: 0;
   margin-right: 0;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.5em;
   margin-top: 0;
 }
 
+#assinar-email {
+  margin-bottom: 0.25em;
+}
 
-// End buttons layout
+.assinar-email-long {
+  background: radial-gradient(circle at 20% 20%, #329709 25%, #256b09 100%);
+  padding: 8px 8px 8px 8px;
+  box-shadow: 0.5rem 1rem 1rem 0 rgba(100,110,140,.4);
+  margin: 20px auto;
+  display: block;
+  width: 560px;
+  max-width: 80%;
+  text-align: center;
+  border-radius: 0.8rem;
+  color: white;
+  font-family: Helvetica, sans-serif;
+  text-decoration: none;
 
-// Categories colors
-.medicina {background-color: rgb(14, 129, 14); color: #f1f1f1;}
-.linux {background-color: rgb(197, 37, 37); color: #f1f1f1;}
-.aleatoriedades {background-color: rgb(117, 34, 158); color: #f1f1f1;}
-.tecnologia {background-color: rgb(207, 88, 19); color: #f1f1f1;}
-.covid19 {background-color: rgb(13, 100, 74); color: #f1f1f1;}
-.cinema {background-color: rgb(31, 95, 233); color: #f1f1f1;}
-.xadrez {background-color: rgb(158, 28, 93); color: #f1f1f1;}
-.livros {background-color: rgb(12, 112, 126); color: #f1f1f1;}
-.webdev {background-color: rgb(117, 66, 0); color: #f1f1f1;}
-.categorias:visited {color: #f1f1f1;}
-.categorias:hover {background-color: #000000;}
+}
+.assinar-email-long:visited {
+  color: white;
+}
+#news-todas {background: radial-gradient(circle at 20% 20%, #b3b44c 25%, #d1b435 100%);}
+#news-musica {background: radial-gradient(circle at 20% 20%, #9c0505 25%, #640505 100%);}
+#news-cinema {background: radial-gradient(circle at 20% 20%, #05659c 25%, #053469 100%);}
+.newsletter {
+  width: 220px;
+  margin-bottom: 12px;
+}
+.assine-email {
+  background: radial-gradient(circle at 20% 20%, #329709 25%, #256b09 100%);;
+  border-radius: 0.8rem;
+  box-shadow: 0.5rem 1rem 1rem 0 rgba(100,110,140,.4);
+  padding: 6px 4px 5px 4px;
+  margin: 30px auto;
+  h3 {
+    text-align: center;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    margin-top: 4px;
+  }
+  p {
+  text-align: center;
+  font-size: 0.9em;
+  color: rgb(240, 240, 240); 
+  line-height: 1.3em;
+  font-family: Helvetica, sans-serif;
+  margin-bottom: 0;
+  }
+}
+.assine-posts {
+  max-width: 500px;
+  width: 80%;
+  margin-top: 50px;
+}
+.assine-front {
+  max-width: 300px;
+}
+
+
+
+// Email Subscription form
+#mc_embed_signup_scroll {
+  .indicates-required {
+    font-size: small;
+  }
+
+}
+input[type=checkbox] {
+  transform: scale(1.5);
+}
+.mc-field-group {
+  ul { 
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+#subscribe {
+  font-size: 1.15em;
+}
+
+// End email Subscription form
+
+
+
+
+
+
+.botao-serif {
+  font-family: var(--header-font);
+  font-size: 1em;
+}
+
+
 
 /* Barra de navegaçao */
 nav {
-  padding-top: 0px;
   margin: 0 auto;
   text-align: left;
   width: 100%;
@@ -190,11 +293,14 @@ nav {
   a {
     text-decoration: none;
     font-size: 14px;
-    border: 1px solid var(--font-color);
+    background-color: #f3f3f3 !important;
+    border: 1px solid #dadada !important;
     border-top: none;
-    padding: 4px 6px 4px 6px;
     border-radius: 0 0 0.5rem 0.5rem;
-    color: var(--link-color);
+    color: black;
+    font-weight: 800;
+    padding: 5px;
+    margin-left: 0;
     display: inline-block;
     margin-bottom: 10px;
   }
@@ -204,7 +310,7 @@ nav {
     text-decoration: none;
   }
   a:visited {
-    color: var(--link-color);
+    color: black;
   }
 }
 .nav-icons {
@@ -213,6 +319,7 @@ nav {
 .current {
   padding-bottom: 10px;
   margin-bottom: 0px;
+  background-color: #e6e6e6 !important;
 }
 
 
@@ -255,19 +362,6 @@ nav {
   margin-bottom: 30px;
 }
 
-// Categories background image
-.back {
-  background-image: url(/cam.svg);
-  background-position: right top; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: contain; /* Resize the background image to cover the entire container */
-}
-.back-medicina {
-  background-image: url(/assets/svgs/asclepius.svg);
-  background-position: right top;
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: contain; /* Resize the background image to cover the entire container */
-}
 
 // Collapsible begin
 .collapsible {
@@ -309,12 +403,15 @@ nav {
   padding-left: 2rem;
   margin-left: 1.5rem;
   display: inline-block;
-  border-color: black;
-  border: 1px solid;
-  border-radius: 1rem;
+  background-color: #f3f3f3 !important;
+  border-radius: 5px;
+  border: 1px solid #dadada !important;
   font-size: 1rem;
+  a {
+    text-decoration: none;
+  }
   a:hover {
-    color: #686868;
+    text-decoration: underline;
   }
 }
 
@@ -325,14 +422,14 @@ nav {
 
 h1  {
   text-align: left;
-  margin-bottom: 0;
+  margin-bottom: 5px;
   max-width: 600px;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--header-font);
   color: var(--font-color-header);
   font-weight: bold;
-  line-height: 1.1;
+  line-height: 1.2;
   margin-bottom: 0.2em;
 }
 
@@ -350,9 +447,8 @@ p, li {
   line-height: 1.8;
   color: var(--font-color);
 }
-img {
+figure img {
   max-width: 100%;
-  margin-top: 40px;
   height: auto;
   display: block;
   margin-left: auto;
@@ -362,8 +458,8 @@ img > article {
   width: 100%;
 }
 figure {
-  margin-bottom: 3em;
-  margin-top: 3em;
+  margin-bottom: 1em;
+  margin-top: 0em;
   margin-inline-start: 0;
   margin-inline-end: 0;
 }
@@ -380,14 +476,6 @@ video {
   margin-bottom: 20px;
 }
 
-article > ol li {
-  padding-bottom: 0.8em;
-}
-/* article a[target="_blank"]:after {
-  content: url(http://upload.wikimedia.org/wikipedia/commons/6/64/Icon_External_Link.png);
-  margin: 0 0 0 5px;
-}
-*/
 
 // select marked text
 ::selection {
@@ -410,8 +498,98 @@ article > ol li {
   }
 }
 .apresentacao {
-  font-family: Georgia, serif;
+  font-family: 'Noto Serif', serif;
 }
+
+.svg-seguir {
+  padding: 1px;
+}
+
+.item {
+  flex: 1;
+}
+.item-inferior {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+
+// Quadro para Newsletter e apresentação
+.quadro {
+  background: radial-gradient(circle at 20% 20%,#517bdd 25%,#4640ff 100%);
+  // background-color: #4764f1 !important;
+  // border: 1px solid #0c2ec5 !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+  margin-right: 30px;
+  margin-left: 30px;
+  border-radius: 10px;
+  padding: 15px 4px 5px 4px;
+}
+// Minha foto na página inicial
+.foto {
+  border-radius: 50%;
+  max-width: 100px;
+  margin: 0 auto;
+  display: block;
+}
+.assinar {
+  text-decoration: none;
+  font-size: medium;
+  background-color: white;
+  font-family: Helvetica, sans-serif;
+  color: #2444e4 !important;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+.assinar:hover {
+  background-color: rgb(240, 240, 240);
+  text-decoration: none;
+}
+.assinar:visited {
+  color: #2444e4 !important;
+}
+.texto-assine {
+  color: white;
+  font-size: 1.15rem;
+  font-family: Noto Sans, Helvetica, sans-serif;
+  line-height: 1.5rem;
+}
+
+
+// Quadro do Sobre o autor
+.quadro-autor {
+  background: radial-gradient(circle at 20% 20%,#3f69c9 25%,#4640ff 100%);
+  // background-color: #4764f1 !important;
+  // border: 1px solid #0c2ec5 !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 10px 10px 10px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  p, h3 {
+    color: whitesmoke;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+  }
+}
+.assinar-autor {
+  margin-top: 5px;
+}
+.autor-icon {
+  width: 16px;
+  fill: #2444e4;
+}
+
+
+
+// ícones de seguir redes sociais
 .redes {
   margin: 0 auto;
   width: 100%;
@@ -425,24 +603,18 @@ article > ol li {
     }
   }
 }
-.svg-seguir {
-  padding: 1px;
+.icon-abertura {
+  fill: rgb(255, 255, 255);
+  padding-right: 8px;
+  width: 20px;
+  height: 20px;
 }
-#ultimas {
-  padding-top: 30px;
-}
-.item {
-  flex: 1;
-}
-.item-inferior {
-  max-width: 300px;
-  margin: 0 auto;
-}
-.foto {
-  border-radius: 50%;
-  max-width: 100px;
-  margin: 0 auto;
-}
+
+
+
+
+
+
 input, textarea {
   margin-top: 0;
   padding-top: 0;
@@ -489,6 +661,7 @@ button {
 .post-date {
   font-size: 0.9em;
   margin-bottom: 0;
+  font-family: Georgia, serif;
 }
 .post-author {
   font-size: 16px;
@@ -496,40 +669,91 @@ button {
   text-align: right;
   margin-top: 0;
 }
+
+
+// Index layout
+
+#ultimas {
+  padding-top: 10px;
+}
 .post-list {
   ul {
     list-style-type: none;
     padding-left: 0;
   }
+  ul li {
+    line-height: 1;
+    margin-bottom: 35px;
+    // background: linear-gradient(to right, rgb(248, 248, 248), rgb(255, 255, 255));
+    // background: rgba(235, 236, 237, 0.3) none repeat scroll 0% 0%;
+    background-color: #fafbfc !important;
+    border: 1px solid #e1e4e8 !important;
+    box-shadow: 0 1px 1px rgba(27,31,35,.1) !important;
+    border-radius: 3px;
+    padding: 5px;
+  }
   li h2 {
-    margin-bottom: 0;
     line-height: 1.2;
-    margin-top: 0.4em;
+    margin-top: 0;
+    margin-bottom: 5px;
   }
   li h2 a {
     text-decoration: none;
     font-size: 24px;
     color: var(--font-color);
-    font-weight: 600;
-
+    font-weight: bold;
   }
   li h2 a:hover {
     color: var(--link-color);
     text-decoration: underline;
   }
 }
+
+
+// CSS das Tags
+.tag {
+  background-color: rgb(250, 250, 24);
+  box-shadow: inset 0 -1px 0 rgba(27,31,35,.12);
+  padding: 3px 5px 3px 5px;
+  border-radius: 5px;
+  margin-right: 2px;
+  color: var(--font-color);
+  font-size: 1rem;
+  display: inline-block;
+}
+#tag-posts {
+  margin-top: 5px;
+}
+.post-info {
+  font-size: 1rem;
+  color: rgb(150, 150, 150);
+  margin-top: 5px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  margin-right: 10px;
+  border-radius: 4px;
+  display: block;
+}
+
+.MBE {background-color: rgb(250, 201, 201);}
+.Notícias {background-color: rgb(248, 246, 147);}
+.Vivências {background-color: rgb(191, 241, 194);}
+.COVID-19 {background-color: rgb(235, 232, 255);}
+.Educação {background-color: rgb(203, 255, 251);}
+.Livros {background-color:rgb(188, 222, 253);}
+.Off-Topic {background-color: rgb(241, 229, 202);}
+.Variados {background-color: rgb(222, 255, 203);}
+.Humanidades {background-color: rgb(255, 203, 252);}
+
 .archive-list {
   li {
     line-height: 1em;
-    margin-bottom: 0.6em;
+    margin-bottom: 15px;
   }
   li a {
     text-decoration: none;
-    font-weight: 600;
-    font-size: 1.2em;
-
     padding-bottom: 0;
-    line-height: 1.6em;
+    line-height: 1.2em;
     font-family: var(--header-font);
   }
   li a:hover {
@@ -539,10 +763,15 @@ button {
 .post-info-archive {
   color: gray;
   margin-top: 0;
+  margin-right: 3px;
   display: inline-block;
   font-size: 0.8em;
   line-height: 0.8em;
   padding-top: 0;
+}
+.tag-archive {
+  font-size: 0.9rem;
+  line-height: 0.8em;
 }
 
 #post-page-info {
@@ -551,13 +780,18 @@ button {
   margin-top: 1px;
   text-align: center;
 }
-.post-info {
-  font-size: 16px;
-  color: gray;
-  margin-top: 5px;
-  display: block;
-}
 
+.pseudobotao2 {
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 2px;
+  color: rgb(150, 150, 150);
+  margin-bottom: 2px;
+  margin-top: 5px;
+  line-height: 1.2;
+}
 
 
 pre { 
@@ -582,28 +816,20 @@ kbd {
   white-space: nowrap;
 }
 blockquote {
-  position: relative;
-  font-family: 'Sanchez', serif;
-  font-style: italic;
-  text-align: center;
-  &:before {
-      content: '\201C';
-      position: absolute;
-      top: -0.30em;
-      left: -0.2em;
-      color: var(--blockquote-color);
-      font-size: 8em;
-      z-index: -1;
-   }
+  border-style: solid;
+  border-width: 0 0 0 .2rem;
+  border-color: #6f42c1;
+  padding: 2px 10px 2px 20px;
+  margin-left: 20px;
+  p { 
+    color: rgb(112, 105, 105);
+}
 }
 q {
-  font-family: 'Sanchez', serif;
   font-style: italic;
 }
 hr {
-  border: 0;
-  height: 1px;
-  background-image: linear-gradient(to right, rgba(189, 189, 189, 0), rgba(211, 211, 211, 0.75), rgba(201, 201, 201, 0));
+  color: #dadada !important;
 }
 
 
@@ -649,6 +875,15 @@ a.footnote:after {
   list-style-type: none;
   }
 }
+
+
+// Ícones do footer
+.icon-footer {
+  fill: gray;
+  width: 20px;
+}
+
+
 .coisas {
   margin: 0 auto;
   font-size: 16px;
@@ -657,8 +892,10 @@ a.footnote:after {
   text-align: center;
 }
 .license {
-  display: inline-block;
+  display: block;
   width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
   p {
     text-align: center;
     font-size: 14px;
@@ -666,8 +903,7 @@ a.footnote:after {
     color: gray;
     a {
       font-size: 14px;
-      color: var(--link-color)ue;
-      text-decoration: none;
+      color: var(--link-color);
     }
   }
   a img {
@@ -719,6 +955,9 @@ a.footnote:after {
   #markdown-toc {
     float: right;
   }
+  article {
+    font-size: 1.25rem;
+  }
 }
 
 /* Aqui é para tablet */
@@ -740,5 +979,9 @@ a.footnote:after {
   }
   img {
     width: inherit;
+  }
+  .quadro {
+    margin-right: 0;
+    margin-left: 60px;
   }
 }
